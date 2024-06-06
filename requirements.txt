@@ -1,0 +1,4 @@
+aiohttp
+aiofiles
+tkinter
+aiohttp_socks
