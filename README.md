@@ -1,20 +1,24 @@
-# Profile Warming Tool
+# Cookie Walker
 
-This project is a Python-based GUI application to increase views on a profile by visiting a list of URLs, with the option to use a proxy or direct connection. It captures cookies from each visited URL.
+This project is a Python-based GUI application that visits a list of URLs using a specified proxy configuration, collects cookies from the visited sites, and saves them in a JSON file. It also displays the results on an interactive map.
 
 ## Features
 
-- GUI for easy input of details
+- GUI for easy input of proxy configuration and URL list
 - Supports SOCKS5 proxies and direct connections
+- Concurrent URL visits for faster cookie collection
 - Progress bar to show the progress
 - Real-time log updates
-- Real-time cookie capture and storage
+- Stop and save functionality
+- Interactive map with visited URLs
+- JSON output of collected cookies
 
 ## Prerequisites
 
 - Python 3.x
 - aiohttp
 - aiofiles
+- folium
 - tkinter
 - aiohttp_socks
 
@@ -22,13 +26,13 @@ This project is a Python-based GUI application to increase views on a profile by
 
 1. Clone the repository:
     ```sh
-    git clone https://github.com/yourusername/your-repo-name.git
-    cd your-repo-name
+    git clone https://github.com/mangoproxy-code/cookie_walker.git
+    cd cookie_walker
     ```
 
 2. Install the required Python packages:
     ```sh
-    pip install -r requirements.txt
+    pip install aiohttp aiofiles folium aiohttp_socks
     ```
 
 ## Usage
@@ -39,13 +43,17 @@ This project is a Python-based GUI application to increase views on a profile by
     ```
 
 2. Use the GUI to:
-    - Input your proxy (if using a proxy) in the format `user:password@host:port`.
-    - Toggle the "Use Proxy" checkbox based on your preference.
+    - Input your proxy configuration in the format `user:password@host:port`.
     - Browse and select the file containing the URLs.
-    - Click "Start" to begin the profile warming process.
-
-3. Check the `cookies.json` file for the collected cookies.
+    - Click "Start" to begin the process.
+    - Click "Stop and Save" to stop the process and save the results.
+    - Click "Open Map" to view the interactive map.
+    - Click "Open JSON" to view the JSON file with the results.
 
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+## Author
+
+Alex Whynot
